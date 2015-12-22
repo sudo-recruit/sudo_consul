@@ -1,0 +1,26 @@
+server {
+  listen 80;
+  server_name  <%= node['sudo_consul']['server_name'] %>;
+
+  access_log  /var/log/nginx/consul_ui.access.log;
+
+  location / {
+   proxy_pass http://localhost:8500/;
+  }
+
+}
+
+server {
+  listen 443;
+  server_name  <%= node['sudo_consul']['server_name'] %>;
+
+  access_log  /var/log/nginx/consul_ui.access.log;
+
+  location / {
+   proxy_pass http://localhost:8500/;
+  }
+
+  ssl on;
+  ssl_certificate /etc/keys/ssl_cert.crt;
+  ssl_certificate_key /etc/keys/ssl_private_key.key;
+}
