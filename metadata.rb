@@ -1,5 +1,5 @@
 name "sudo_consul"
-version "0.0.2"
+version "0.0.3"
 maintainer "ocowchun"
 maintainer_email "ocowchun@gmail.com"
 supports "ubuntu"
