@@ -20,4 +20,10 @@ node.default['consul']['config']['node_name'] = 'amazing_consul_client'
 node.default['consul']['config']['start_join'] = %w{172.31.1.1}
 ```
 
+##Enable Consul ui
+
+```rb
+include_recipe "sudo_consul::consul_ui"
+```
+
 MIT
