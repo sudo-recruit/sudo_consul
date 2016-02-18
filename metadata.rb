@@ -2,10 +2,13 @@ name "sudo_consul"
 version "0.0.3"
 maintainer "ocowchun"
 maintainer_email "ocowchun@gmail.com"
+license  "MIT"
 supports "ubuntu"
+description "install consul"
+long_description IO.read(File.join(File.dirname(__FILE__), "README.md"))
 
 depends 'apt'
 depends 'nginx'
-depends 'consul', '~> 1.3.1'
+depends 'consul', '~> 1.4.3'
 depends 'consul-template', '~> 0.9.1'
-depends 'simple_consul_alerts'
+depends 'sudo_consul_service', '~> 0.0.4'

@@ -4,5 +4,4 @@ package 'vim'
 package 'curl'
 
 include_recipe "consul::default"
-include_recipe "simple_consul_alerts::default"
-
+include_recipe "sudo_consul_service::required_reboot"
