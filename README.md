@@ -26,4 +26,8 @@ node.default['consul']['config']['start_join'] = %w{172.31.1.1}
 include_recipe "sudo_consul::consul_ui"
 ```
 
+## TODO
+###add vault
+https://github.com/johnbellone/vault-cookbook
+
 MIT
